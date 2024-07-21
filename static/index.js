@@ -28,13 +28,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         const data = await response.json();
-        const girlImageUrl = document.getElementById('setup-container').dataset.girlImageUrl;
+        const botImageUrl = document.getElementById('setup-container').dataset.botImageUrl;
         const aiMessageContainer = document.createElement('div');
         aiMessageContainer.className = 'ai-message';
-        const girlImage = document.createElement('img');
-        girlImage.src = girlImageUrl;
-        girlImage.className = 'girl-image';
-        aiMessageContainer.appendChild(girlImage);
+        const botImage = document.createElement('img');
+        botImage.src = botImageUrl;
+        botImage.className = 'bot-image';
+        aiMessageContainer.appendChild(botImage);
         const aiSpeechBubble = document.createElement('div');
         aiSpeechBubble.className = 'speech-bubble-ai';
         let responseText = data.response.replace(/\n/g, '<br>');
